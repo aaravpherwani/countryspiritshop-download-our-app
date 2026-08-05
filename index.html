@@ -71,58 +71,88 @@
       width: 100%;
       max-width: 650px;
       margin: 0 auto;
+
       padding:
         max(40px, env(safe-area-inset-top))
         22px
         max(50px, env(safe-area-inset-bottom));
+
       text-align: center;
     }
 
     .logo {
       width: 120px;
       height: 120px;
+
       object-fit: contain;
       display: block;
+
       margin: 10px auto 24px;
+
       border-radius: 24px;
     }
 
     h1 {
       font-size: 30px;
       line-height: 1.15;
+
       margin: 0 0 10px;
     }
 
     .subtitle {
       margin: 0 auto 30px;
+
       max-width: 500px;
+
       color: #666;
+
       font-size: 17px;
       line-height: 1.55;
     }
 
+    .best-experience {
+      margin: -12px auto 30px;
+
+      max-width: 520px;
+
+      color: #777;
+
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
     .card {
       background: #ffffff;
+
       border-radius: 18px;
+
       padding: 24px;
+
       margin: 18px 0;
+
       text-align: left;
-      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.07);
+
+      box-shadow:
+        0 4px 18px rgba(0, 0, 0, 0.07);
     }
 
     .card h2 {
       margin: 0 0 18px;
+
       font-size: 21px;
     }
 
     .card ol {
       margin: 0;
+
       padding-left: 25px;
     }
 
     .card li {
       font-size: 16px;
+
       line-height: 1.55;
+
       margin-bottom: 12px;
     }
 
@@ -132,25 +162,40 @@
 
     .share-icon {
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
+
       padding: 3px 7px;
+
       border-radius: 6px;
+
       background: #eeeeee;
+
       font-weight: 600;
     }
 
     .open-button {
       display: block;
+
       width: 100%;
+
       text-align: center;
+
       padding: 15px 20px;
+
       margin-top: 20px;
+
       border-radius: 12px;
+
       background: #171717;
+
       color: #ffffff;
+
       text-decoration: none;
+
       font-size: 16px;
+
       font-weight: 600;
     }
 
@@ -160,18 +205,25 @@
 
     .note {
       color: #777;
+
       font-size: 14px;
+
       line-height: 1.5;
+
       margin-top: 28px;
     }
 
     .footer {
       color: #999;
+
       font-size: 12px;
+
       margin-top: 35px;
     }
 
-    /* Hide the install instructions once the app is already installed */
+    /* Hidden by default.
+       Kept for compatibility with future install-state UI. */
+
     .installed-message {
       display: none;
     }
@@ -183,20 +235,32 @@
   <main class="page">
 
     <!-- Country Spirit Shop logo -->
+
     <img
       src="./logo.png"
       alt="Country Spirit Shop"
       class="logo"
     >
 
+
     <h1>Country Spirit Shop</h1>
+
 
     <p class="subtitle">
       Add Country Spirit Shop to your Home Screen for quick access to our website.
     </p>
 
 
-    <!-- iPhone -->
+    <p class="best-experience">
+      For the best experience, use <strong>Safari</strong> on iPhone
+      or <strong>Chrome</strong> on Android.
+    </p>
+
+
+    <!-- ==========================================
+         iPHONE
+         ========================================== -->
+
     <section class="card">
 
       <h2>📱 iPhone</h2>
@@ -208,26 +272,23 @@
         </li>
 
         <li>
-          Tap the
-          <strong>Share</strong>
-          button
+          Tap the <strong>Share</strong> button
           <span class="share-icon">↑</span>.
         </li>
 
         <li>
-          Select
+          Scroll down and tap
           <strong>Add to Home Screen</strong>.
         </li>
 
         <li>
-          Turn on
-          <strong>Open as Web App</strong>
-          if that option appears.
+          If you see
+          <strong>Open as Web App</strong>,
+          turn it on.
         </li>
 
         <li>
-          Tap
-          <strong>Add</strong>.
+          Tap <strong>Add</strong>.
         </li>
 
       </ol>
@@ -235,7 +296,10 @@
     </section>
 
 
-    <!-- Android -->
+    <!-- ==========================================
+         ANDROID
+         ========================================== -->
+
     <section class="card">
 
       <h2>🤖 Android</h2>
@@ -247,17 +311,12 @@
         </li>
 
         <li>
-          Open the
-          <strong>⋮</strong>
-          menu.
+          Tap the <strong>⋮</strong> menu.
         </li>
 
         <li>
-          Select
-          <strong>Install app</strong>
-          or
-          <strong>Add to Home screen</strong>
-          if available.
+          Tap <strong>Install app</strong>
+          or <strong>Add to Home screen</strong>.
         </li>
 
         <li>
@@ -269,7 +328,10 @@
     </section>
 
 
-    <!-- Fallback -->
+    <!-- ==========================================
+         FALLBACK
+         ========================================== -->
+
     <section class="card">
 
       <h2>Can't install it?</h2>
@@ -292,6 +354,7 @@
       Once installed, tap the Country Spirit Shop icon on your Home Screen
       to open the website.
     </p>
+
 
     <div class="footer">
       Country Spirit Shop
@@ -347,18 +410,19 @@
 
     /*
      * ==========================================
-     * DETECT STANDALONE / INSTALLED MODE
+     * DETECT INSTALLED / STANDALONE MODE
      * ==========================================
      *
      * Android / modern browsers:
      *   display-mode: standalone
      *
-     * iPhone:
+     * iPhone / iPad:
      *   navigator.standalone
      */
 
     const isIOSStandalone =
       window.navigator.standalone === true;
+
 
     const isStandalone =
       window.matchMedia(
@@ -377,7 +441,7 @@
      *
      * When the customer taps the Country Spirit
      * Shop icon on their Home Screen, the launcher
-     * sends them to the Google Sites homepage.
+     * automatically redirects to Google Sites.
      */
 
     if (launchedAsInstalledApp) {
