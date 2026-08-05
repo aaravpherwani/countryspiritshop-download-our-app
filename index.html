@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -154,6 +155,10 @@
       font-weight: 600;
     }
 
+    .open-button:active {
+      opacity: 0.85;
+    }
+
     .note {
       color: #777;
       font-size: 14px;
@@ -178,7 +183,7 @@
 
   <main class="page">
 
-    <!-- Your Country Spirit Shop logo -->
+    <!-- Country Spirit Shop logo -->
     <img
       src="./logo.png"
       alt="Country Spirit Shop"
@@ -198,6 +203,7 @@
       <h2>📱 iPhone</h2>
 
       <ol>
+
         <li>
           Open this page in <strong>Safari</strong>.
         </li>
@@ -224,6 +230,7 @@
           Tap
           <strong>Add</strong>.
         </li>
+
       </ol>
 
     </section>
@@ -235,6 +242,7 @@
       <h2>🤖 Android</h2>
 
       <ol>
+
         <li>
           Open this page in <strong>Chrome</strong>.
         </li>
@@ -248,12 +256,15 @@
         <li>
           Select
           <strong>Install app</strong>
+          or
+          <strong>Add to Home screen</strong>
           if available.
         </li>
 
         <li>
           Follow the installation instructions.
         </li>
+
       </ol>
 
     </section>
@@ -315,13 +326,19 @@
         navigator.serviceWorker
           .register("./sw.js")
           .then(() => {
-            console.log("Service worker registered.");
+
+            console.log(
+              "Country Spirit Shop service worker registered."
+            );
+
           })
           .catch((error) => {
+
             console.log(
               "Service worker registration failed:",
               error
             );
+
           });
 
       });
@@ -359,9 +376,9 @@
      * INSTALLED APP → GOOGLE SITES
      * ==========================================
      *
-     * When the customer taps the Home Screen
-     * icon, the GitHub Pages launcher automatically
-     * sends them to your Google Sites homepage.
+     * When the customer taps the Country Spirit
+     * Shop icon on their Home Screen, the launcher
+     * sends them to the Google Sites homepage.
      */
 
     if (launchedAsInstalledApp) {
@@ -376,3 +393,4 @@
 
 </body>
 </html>
+```
