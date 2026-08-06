@@ -1,458 +1,468 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, viewport-fit=cover"
-  >
-
-  <title>Country Spirit Shop</title>
-
-  <!-- PWA manifest -->
-  <link rel="manifest" href="./manifest.json">
-
-  <!-- iPhone / iPad Home Screen icon -->
-  <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="./apple-touch-icon.png"
-  >
-
-  <!-- iOS Web App settings -->
-  <meta
-    name="apple-mobile-web-app-capable"
-    content="yes"
-  >
 
-  <meta
-    name="apple-mobile-web-app-status-bar-style"
-    content="default"
-  >
+<meta charset="UTF-8">
 
-  <meta
-    name="apple-mobile-web-app-title"
-    content="Country Spirit Shop"
-  >
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, viewport-fit=cover"
+>
 
-  <meta
-    name="theme-color"
-    content="#ffffff"
-  >
+<title>Country Spirit Shop</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="./favicon.png">
 
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100%;
-    }
+<!-- PWA Manifest -->
+<link rel="manifest" href="./manifest.json">
 
-    body {
-      font-family:
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Roboto,
-        Helvetica,
-        Arial,
-        sans-serif;
+<!-- iPhone / iPad Home Screen Icon -->
+<link
+  rel="apple-touch-icon"
+  sizes="180x180"
+  href="./apple-touch-icon.png"
+>
 
-      background: #f7f7f7;
-      color: #171717;
-    }
+<!-- iOS Web App Settings -->
+<meta
+  name="apple-mobile-web-app-capable"
+  content="yes"
+>
 
-    .page {
-      width: 100%;
-      max-width: 650px;
-      margin: 0 auto;
+<meta
+  name="apple-mobile-web-app-status-bar-style"
+  content="default"
+>
 
-      padding:
-        max(40px, env(safe-area-inset-top))
-        22px
-        max(50px, env(safe-area-inset-bottom));
+<meta
+  name="apple-mobile-web-app-title"
+  content="Country Spirit Shop"
+>
 
-      text-align: center;
-    }
+<meta
+  name="theme-color"
+  content="#ffffff"
+>
 
-    .logo {
-      width: 120px;
-      height: 120px;
 
-      object-fit: contain;
-      display: block;
+<style>
 
-      margin: 10px auto 24px;
+* {
+  box-sizing: border-box;
+}
 
-      border-radius: 24px;
-    }
 
-    h1 {
-      font-size: 30px;
-      line-height: 1.15;
+html,
+body {
+  margin:0;
+  padding:0;
+  min-height:100%;
+}
 
-      margin: 0 0 10px;
-    }
 
-    .subtitle {
-      margin: 0 auto 30px;
+body {
 
-      max-width: 500px;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
 
-      color: #666;
+  background:#f7f7f7;
+  color:#171717;
 
-      font-size: 17px;
-      line-height: 1.55;
-    }
+}
 
-    .best-experience {
-      margin: -12px auto 30px;
 
-      max-width: 520px;
+.page {
 
-      color: #777;
+  width:100%;
+  max-width:650px;
+  margin:0 auto;
 
-      font-size: 14px;
-      line-height: 1.5;
-    }
+  padding:
+    max(40px, env(safe-area-inset-top))
+    22px
+    max(50px, env(safe-area-inset-bottom));
 
-    .card {
-      background: #ffffff;
+  text-align:center;
 
-      border-radius: 18px;
+}
 
-      padding: 24px;
 
-      margin: 18px 0;
+.logo {
 
-      text-align: left;
+  width:120px;
+  height:120px;
 
-      box-shadow:
-        0 4px 18px rgba(0, 0, 0, 0.07);
-    }
+  object-fit:contain;
 
-    .card h2 {
-      margin: 0 0 18px;
+  display:block;
 
-      font-size: 21px;
-    }
+  margin:10px auto 24px;
 
-    .card ol {
-      margin: 0;
+  border-radius:24px;
 
-      padding-left: 25px;
-    }
+}
 
-    .card li {
-      font-size: 16px;
 
-      line-height: 1.55;
+h1 {
 
-      margin-bottom: 12px;
-    }
+  font-size:30px;
+  line-height:1.15;
 
-    .card li:last-child {
-      margin-bottom: 0;
-    }
+  margin:0 0 10px;
 
-    .share-icon {
-      display: inline-flex;
+}
 
-      align-items: center;
-      justify-content: center;
 
-      padding: 3px 7px;
+.subtitle {
 
-      border-radius: 6px;
+  margin:0 auto 30px;
 
-      background: #eeeeee;
+  max-width:500px;
 
-      font-weight: 600;
-    }
+  color:#666;
 
-    .open-button {
-      display: block;
+  font-size:17px;
 
-      width: 100%;
+  line-height:1.55;
 
-      text-align: center;
+}
 
-      padding: 15px 20px;
 
-      margin-top: 20px;
+.best-experience {
 
-      border-radius: 12px;
+  margin:-12px auto 30px;
 
-      background: #171717;
+  max-width:520px;
 
-      color: #ffffff;
+  color:#777;
 
-      text-decoration: none;
+  font-size:14px;
 
-      font-size: 16px;
+  line-height:1.5;
 
-      font-weight: 600;
-    }
+}
 
-    .open-button:active {
-      opacity: 0.85;
-    }
 
-    .note {
-      color: #777;
+.card {
 
-      font-size: 14px;
+  background:white;
 
-      line-height: 1.5;
+  border-radius:18px;
 
-      margin-top: 28px;
-    }
+  padding:24px;
 
-    .footer {
-      color: #999;
+  margin:18px 0;
 
-      font-size: 12px;
+  text-align:left;
 
-      margin-top: 35px;
-    }
+  box-shadow:
+    0 4px 18px rgba(0,0,0,.07);
 
-    /* Hidden by default.
-       Kept for compatibility with future install-state UI. */
+}
 
-    .installed-message {
-      display: none;
-    }
-  </style>
+
+.card h2 {
+
+  margin:0 0 18px;
+
+  font-size:21px;
+
+}
+
+
+.card ol {
+
+  margin:0;
+
+  padding-left:25px;
+
+}
+
+
+.card li {
+
+  font-size:16px;
+
+  line-height:1.55;
+
+  margin-bottom:12px;
+
+}
+
+
+.share-icon {
+
+  display:inline-flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  padding:3px 7px;
+
+  border-radius:6px;
+
+  background:#eee;
+
+  font-weight:600;
+
+}
+
+
+.open-button {
+
+  display:block;
+
+  width:100%;
+
+  text-align:center;
+
+  padding:15px 20px;
+
+  margin-top:20px;
+
+  border-radius:12px;
+
+  background:#171717;
+
+  color:white;
+
+  text-decoration:none;
+
+  font-size:16px;
+
+  font-weight:600;
+
+}
+
+
+.note {
+
+  color:#777;
+
+  font-size:14px;
+
+  line-height:1.5;
+
+  margin-top:28px;
+
+}
+
+
+.footer {
+
+  color:#999;
+
+  font-size:12px;
+
+  margin-top:35px;
+
+}
+
+
+</style>
+
 </head>
+
 
 <body>
 
-  <main class="page">
 
-    <!-- Country Spirit Shop logo -->
+<main class="page">
 
-    <img
-      src="./logo.png"
-      alt="Country Spirit Shop"
-      class="logo"
-    >
 
+<img
+src="./logo.png"
+alt="Country Spirit Shop"
+class="logo"
+>
 
-    <h1>Country Spirit Shop</h1>
 
+<h1>Country Spirit Shop</h1>
 
-    <p class="subtitle">
-      Add Country Spirit Shop to your Home Screen for quick access to our website.
-    </p>
 
+<p class="subtitle">
+Add Country Spirit Shop to your Home Screen for quick access to our website.
+</p>
 
-    <p class="best-experience">
-      For the best experience, use <strong>Safari</strong> on iPhone
-      or <strong>Chrome</strong> on Android.
-    </p>
 
+<p class="best-experience">
+For the best experience, use <strong>Safari</strong> on iPhone
+or <strong>Chrome</strong> on Android.
+</p>
 
-    <!-- ==========================================
-         iPHONE
-         ========================================== -->
 
-    <section class="card">
 
-      <h2>📱 iPhone</h2>
+<section class="card">
 
-      <ol>
+<h2>📱 iPhone</h2>
 
-        <li>
-          Open this page in <strong>Safari</strong>.
-        </li>
+<ol>
 
-        <li>
-          Tap the <strong>Share</strong> button
-          <span class="share-icon">↑</span>.
-        </li>
+<li>
+Open this page in <strong>Safari</strong>.
+</li>
 
-        <li>
-          Scroll down and tap
-          <strong>Add to Home Screen</strong>.
-        </li>
+<li>
+Tap the <strong>Share</strong> button
+<span class="share-icon">↑</span>.
+</li>
 
-        <li>
-          If you see
-          <strong>Open as Web App</strong>,
-          turn it on.
-        </li>
+<li>
+Scroll down and tap
+<strong>Add to Home Screen</strong>.
+</li>
 
-        <li>
-          Tap <strong>Add</strong>.
-        </li>
+<li>
+If available, enable
+<strong>Open as Web App</strong>.
+</li>
 
-      </ol>
+<li>
+Tap <strong>Add</strong>.
+</li>
 
-    </section>
+</ol>
 
+</section>
 
-    <!-- ==========================================
-         ANDROID
-         ========================================== -->
 
-    <section class="card">
 
-      <h2>🤖 Android</h2>
+<section class="card">
 
-      <ol>
+<h2>🤖 Android</h2>
 
-        <li>
-          Open this page in <strong>Chrome</strong>.
-        </li>
+<ol>
 
-        <li>
-          Tap the <strong>⋮</strong> menu.
-        </li>
+<li>
+Open this page in <strong>Chrome</strong>.
+</li>
 
-        <li>
-          Tap <strong>Install app</strong>
-          or <strong>Add to Home screen</strong>.
-        </li>
+<li>
+Tap the <strong>⋮</strong> menu.
+</li>
 
-        <li>
-          Follow the installation instructions.
-        </li>
+<li>
+Tap <strong>Install app</strong>
+or <strong>Add to Home screen</strong>.
+</li>
 
-      </ol>
+<li>
+Complete installation.
+</li>
 
-    </section>
+</ol>
 
+</section>
 
-    <!-- ==========================================
-         FALLBACK
-         ========================================== -->
 
-    <section class="card">
 
-      <h2>Can't install it?</h2>
+<section class="card">
 
-      <p>
-        You can still open Country Spirit Shop directly.
-      </p>
+<h2>Can't install it?</h2>
 
-      <a
-        class="open-button"
-        href="https://sites.google.com/view/countryspiritshop/home"
-      >
-        Open Country Spirit Shop
-      </a>
+<p>
+You can still open Country Spirit Shop directly.
+</p>
 
-    </section>
 
+<a
+class="open-button"
+href="https://countryspiritshop.com/"
+>
+Open Country Spirit Shop
+</a>
 
-    <p class="note">
-      Once installed, tap the Country Spirit Shop icon on your Home Screen
-      to open the website.
-    </p>
 
+</section>
 
-    <div class="footer">
-      Country Spirit Shop
-    </div>
 
-  </main>
 
+<p class="note">
+Once installed, tap the Country Spirit Shop icon on your Home Screen
+to open the website.
+</p>
 
-  <script>
 
-    /*
-     * ==========================================
-     * COUNTRY SPIRIT SHOP GOOGLE SITES URL
-     * ==========================================
-     */
+<div class="footer">
+Country Spirit Shop
+</div>
 
-    const GOOGLE_SITES_HOME =
-      "https://sites.google.com/view/countryspiritshop/home";
 
+</main>
 
-    /*
-     * ==========================================
-     * SERVICE WORKER
-     * ==========================================
-     */
 
-    if ("serviceWorker" in navigator) {
 
-      window.addEventListener("load", () => {
+<script>
 
-        navigator.serviceWorker
-          .register("./sw.js")
-          .then(() => {
 
-            console.log(
-              "Country Spirit Shop service worker registered."
-            );
+const WEBSITE =
+"https://countryspiritshop.com/";
 
-          })
-          .catch((error) => {
 
-            console.log(
-              "Service worker registration failed:",
-              error
-            );
+// Register service worker
 
-          });
+if ("serviceWorker" in navigator) {
 
-      });
+window.addEventListener("load", () => {
 
-    }
+navigator.serviceWorker
+.register("./sw.js")
+.then(() => {
 
+console.log(
+"Country Spirit Shop service worker registered."
+);
 
-    /*
-     * ==========================================
-     * DETECT INSTALLED / STANDALONE MODE
-     * ==========================================
-     *
-     * Android / modern browsers:
-     *   display-mode: standalone
-     *
-     * iPhone / iPad:
-     *   navigator.standalone
-     */
+})
+.catch(error => {
 
-    const isIOSStandalone =
-      window.navigator.standalone === true;
+console.log(
+"Service worker registration failed:",
+error
+);
 
+});
 
-    const isStandalone =
-      window.matchMedia(
-        "(display-mode: standalone)"
-      ).matches;
+});
 
+}
 
-    const launchedAsInstalledApp =
-      isIOSStandalone || isStandalone;
 
 
-    /*
-     * ==========================================
-     * INSTALLED APP → GOOGLE SITES
-     * ==========================================
-     *
-     * When the customer taps the Country Spirit
-     * Shop icon on their Home Screen, the launcher
-     * automatically redirects to Google Sites.
-     */
+// Detect installed app mode
 
-    if (launchedAsInstalledApp) {
+const isIOSStandalone =
+window.navigator.standalone === true;
 
-      window.location.replace(
-        GOOGLE_SITES_HOME
-      );
 
-    }
+const isStandalone =
+window.matchMedia(
+"(display-mode: standalone)"
+).matches;
 
-  </script>
+
+
+// Redirect only when opened from Home Screen
+
+if (isIOSStandalone || isStandalone) {
+
+window.location.replace(
+WEBSITE
+);
+
+}
+
+
+</script>
+
 
 </body>
 </html>
